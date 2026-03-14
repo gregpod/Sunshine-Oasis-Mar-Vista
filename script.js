@@ -1,12 +1,14 @@
 // ── Mobile nav ────────────────────────────────────────────────
 function toggleNav() {
-  document.getElementById('sidebar').classList.toggle('open');
+  const open = document.getElementById('sidebar').classList.toggle('open');
   document.getElementById('overlay').classList.toggle('open');
+  document.body.style.overflow = open ? 'hidden' : '';
 }
 
 function closeNav() {
   document.getElementById('sidebar').classList.remove('open');
   document.getElementById('overlay').classList.remove('open');
+  document.body.style.overflow = '';
 }
 
 // ── Active nav link on scroll ──────────────────────────────────
