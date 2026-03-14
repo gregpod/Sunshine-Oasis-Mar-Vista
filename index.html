@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Guest Guide — Sunshine Oasis</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,600;0,700;1,400&family=Open+Sans:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- ── Mobile header ── -->
+  <header class="mobile-header">
+    <span class="mobile-logo">Sunshine Oasis</span>
+    <button class="hamburger" aria-label="Open menu" onclick="toggleNav()">
+      <span></span><span></span><span></span>
+    </button>
+  </header>
+
+  <!-- ── Sidebar nav ── -->
+  <nav class="sidebar" id="sidebar">
+    <div class="sidebar-inner">
+      <div class="sidebar-brand">
+        <div class="brand-title">Sunshine Oasis</div>
+        <div class="brand-sub">Guest Guide</div>
+      </div>
+
+      <ul class="nav-list">
+        <li><a href="#welcome" class="nav-link" onclick="closeNav()">Welcome</a></li>
+
+        <li class="nav-section-label">Inside</li>
+        <li>
+          <a href="#kitchen" class="nav-link" onclick="closeNav()">Kitchen</a>
+          <ul class="nav-sub">
+            <li><a href="#refrigerator" onclick="closeNav()">Refrigerator &amp; Freezer</a></li>
+            <li><a href="#stovetop" onclick="closeNav()">Stove Top</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#dining" class="nav-link" onclick="closeNav()">Dining Room</a>
+          <ul class="nav-sub">
+            <li><a href="#sonos" onclick="closeNav()">Sonos Sound System</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#tv-room" class="nav-link" onclick="closeNav()">TV Room</a>
+          <ul class="nav-sub">
+            <li><a href="#fireplace" onclick="closeNav()">Gas Fireplace</a></li>
+            <li><a href="#record-player" onclick="closeNav()">Record Player</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-section-label">Outside</li>
+        <li>
+          <a href="#backyard" class="nav-link" onclick="closeNav()">Back Yard</a>
+          <ul class="nav-sub">
+            <li><a href="#bbq" onclick="closeNav()">BBQ</a></li>
+            <li><a href="#fire-pit" onclick="closeNav()">Gas Fire Pit</a></li>
+            <li><a href="#pool" onclick="closeNav()">Pool</a></li>
+            <li><a href="#spa" onclick="closeNav()">Hot Tub / Spa</a></li>
+            <li><a href="#outdoor-lighting" onclick="closeNav()">Outdoor Lighting</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-section-label">Safety</li>
+        <li>
+          <a href="#emergency" class="nav-link emergency-link" onclick="closeNav()">In Case of Emergency</a>
+          <ul class="nav-sub">
+            <li><a href="#shutoffs" onclick="closeNav()">Gas, Water &amp; Electrical</a></li>
+            <li><a href="#evacuation" onclick="closeNav()">Evacuation</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ── Overlay (mobile) ── -->
+  <div class="overlay" id="overlay" onclick="closeNav()"></div>
+
+  <!-- ── Main content ── -->
+  <main class="content">
+
+    <!-- WELCOME -->
+    <section id="welcome" class="page-section welcome-section">
+      <div class="welcome-hero" style="background-image:url('images/exterior.jpg')">
+        <div class="welcome-overlay">
+          <h1 class="welcome-title">Welcome to Sunshine Oasis</h1>
+          <p class="welcome-sub">Luxury Westside Retreat &nbsp;·&nbsp; Los Angeles, California</p>
+          <div class="welcome-divider"></div>
+          <p class="welcome-tagline">We're so glad you're here.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══ KITCHEN ══ -->
+    <section id="kitchen" class="page-section">
+      <div class="section-header">
+        <h2>Kitchen</h2>
+      </div>
+
+      <div class="section-body">
+
+        <div id="refrigerator" class="subsection">
+          <h3>Refrigerator &amp; Freezer</h3>
+          <div class="content-block">
+            <div class="video-summary-row">
+              <div class="video-thumbnail" data-video="images/fridge.mp4">
+                <img src="images/thumb-fridge.jpg" alt="Refrigerator & Freezer video" />
+                <div class="play-btn"><svg viewBox="0 0 24 24" fill="white"><polygon points="6,3 20,12 6,21"/></svg></div>
+              </div>
+              <ul class="instruction-list">
+                <li>Both the <strong>water and ice dispensers work</strong> on this refrigerator.</li>
+                <li>Sometimes the ice can get a little <strong>stuck in its bin</strong> — you may hear the dispenser whirring but no ice comes out.</li>
+                <li>If that happens, open the freezer — the <strong>ice bin is stored up top</strong>.</li>
+                <li>Grab the bin and <strong>give it a little jiggle</strong> to knock the ice loose, and the dispenser should work perfectly after that.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div id="stovetop" class="subsection">
+          <h3>Stove Top</h3>
+          <div class="content-block">
+            <div class="video-summary-row">
+              <div class="video-thumbnail" data-video="images/stovetop.mp4">
+                <img src="images/thumb-stovetop.jpg" alt="Stove Top video" />
+                <div class="play-btn"><svg viewBox="0 0 24 24" fill="white"><polygon points="6,3 20,12 6,21"/></svg></div>
+              </div>
+              <ul class="instruction-list">
+              <li>The <strong>front right burner is marked — do not use.</strong> The igniter has always been finicky on that one and has been repaired many times without success.</li>
+              <li>All <strong>other five burners work great</strong> — use them freely.</li>
+              <li>If you truly need all six burners, you can turn the front right on and <strong>light it with a match</strong> if you're comfortable doing so.</li>
+              <li>After the stove has been cleaned, the small <strong>caps on top of the burners</strong> can shift out of position and a burner may struggle to light.</li>
+              <li>If a burner won't ignite, <strong>give the center cap a little jiggle</strong> to make sure it's properly seated — it should light right up.</li>
+            </ul>
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+    </section>
+
+    <!-- ══ DINING ROOM ══ -->
+    <section id="dining" class="page-section">
+      <div class="section-header">
+        <h2>Dining Room</h2>
+      </div>
+      <div class="section-body">
+
+        <div id="sonos" class="subsection">
+          <h3>Sonos Sound System</h3>
+          <div class="content-block">
+            <div class="video-summary-row">
+              <div class="video-thumbnail" data-video="images/sonos.mp4">
+                <img src="images/thumb-sonos.jpg" alt="Sonos Sound System video" />
+                <div class="play-btn"><svg viewBox="0 0 24 24" fill="white"><polygon points="6,3 20,12 6,21"/></svg></div>
+              </div>
+              <ul class="instruction-list">
+                <li>There are <strong>four Sonos units</strong> — one next to the dining room table, one on the TV room bookshelf, one on the table by the front door, and one on the downstairs office bookshelf.</li>
+                <li>The <strong>two by the front door and office are portable</strong> — take them out to the pool or backyard whenever you like.</li>
+                <li>Please <strong>plug them back in</strong> when you're done so they're charged and ready for the next guests.</li>
+                <li>Open any music app (Spotify, Apple Music, etc.), tap the <strong>AirPlay icon</strong>, and you'll see all four rooms listed.</li>
+                <li>Connect to <strong>any combination</strong> of Dining Room, Family Room, Living Room, and Office.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+
+
+
+
+    <!-- ══ TV ROOM ══ -->
+    <section id="tv-room" class="page-section">
+      <div class="section-header">
+        <h2>TV Room</h2>
+      </div>
+      <div class="section-body">
+
+        <div id="fireplace" class="subsection">
+          <h3>Gas Fireplace</h3>
+          <div class="content-block">
+            <div class="video-summary-row">
+              <div class="video-thumbnail" data-video="images/fireplace.mp4">
+                <img src="images/thumb-fireplace.jpg" alt="Gas Fireplace video" />
+                <div class="play-btn"><svg viewBox="0 0 24 24" fill="white"><polygon points="6,3 20,12 6,21"/></svg></div>
+              </div>
+              <ul class="instruction-list">
+                <li>To light, turn the valve on the fireplace <strong>about a half turn counterclockwise</strong> to open the gas.</li>
+                <li>Then use the <strong>long lighter</strong> (sitting on the hearth) to ignite — it'll make a big whoosh sound, but that's completely normal.</li>
+                <li>The fireplace puts out a lot of heat and really warms up the room nicely.</li>
+                <li>To shut it off, turn the valve <strong>clockwise until it's snug</strong> — the flame will go out automatically.</li>
+                <li>The coals may keep <strong>glowing for a little while</strong> after you turn it off — that's normal. As long as the valve is fully closed, it's off.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div id="record-player" class="subsection">
+          <h3>Record Player</h3>
+          <div class="content-block placeholder-text">Instructions coming soon.</div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ══ BACK YARD ══ -->
+    <section id="backyard" class="page-section">
+      <div class="section-header">
+        <h2>Back Yard</h2>
+      </div>
+
+      <div class="section-body">
+
+        <div id="bbq" class="subsection">
+          <h3>BBQ</h3>
+          <div class="content-block placeholder-text">Instructions coming soon.</div>
+        </div>
+
+        <div id="fire-pit" class="subsection">
+          <h3>Gas Fire Pit</h3>
+          <div class="content-block">
+            <div class="video-summary-row">
+              <div class="video-thumbnail" data-video="images/fire-pit.mp4">
+                <img src="images/thumb-fire-pit.jpg" alt="Gas Fire Pit video" />
+                <div class="play-btn"><svg viewBox="0 0 24 24" fill="white"><polygon points="6,3 20,12 6,21"/></svg></div>
+              </div>
+              <ul class="instruction-list">
+                <li>On the <strong>end closest to the pool</strong>, open the panel and make sure the <strong>gas bottle valve is open</strong>.</li>
+                <li>On the <strong>side closest to the couch</strong>, find the knob and ignition button.</li>
+                <li>Turn the knob <strong>about a quarter turn</strong>, then press and hold the ignition button — <strong>keep holding the knob</strong> for a couple seconds until the flame catches.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div id="pool" class="subsection">
+          <h3>Pool</h3>
+          <div class="content-block">
+            <div class="video-summary-row">
+              <div class="video-thumbnail" data-video="images/pool-heat.mp4">
+                <img src="images/thumb-pool-heat.jpg" alt="Pool heating video" />
+                <div class="play-btn"><svg viewBox="0 0 24 24" fill="white"><polygon points="6,3 20,12 6,21"/></svg></div>
+              </div>
+              <ul class="instruction-list">
+                <li>Start at the <strong>valve panel behind the bush near the hot tub</strong> — make sure all handles point toward <strong>Pool Return</strong> and <strong>Pool Suction</strong> so water flows through the pool.</li>
+                <li>Follow the wall to the <strong>cabana</strong> where the heater and pump are located.</li>
+                <li>On the <strong>pump control panel</strong>, press <strong>button 2</strong> to increase pump speed to heating mode (button 1 is just the daily filtration setting).</li>
+                <li>On the <strong>heater</strong>, select <strong>Pool</strong>, then use the <strong>up/down arrows</strong> to dial in your desired temperature.</li>
+                <li>Depending on outside temp, it may take <strong>a couple hours</strong> to heat up — best to start it <strong>first thing in the morning</strong> on days you plan to swim.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div id="spa" class="subsection">
+          <h3>Hot Tub / Spa</h3>
+          <div class="content-block">
+            <div class="video-summary-row">
+              <div class="video-thumbnail" data-video="images/spa.mp4">
+                <img src="images/thumb-spa.jpg" alt="Spa heating video" />
+                <div class="play-btn"><svg viewBox="0 0 24 24" fill="white"><polygon points="6,3 20,12 6,21"/></svg></div>
+              </div>
+              <ul class="instruction-list">
+                <li>At the <strong>valve panel</strong> (back corner near the hot tub), turn the handles to <strong>Spa Return</strong> and <strong>Spa Suction</strong>.</li>
+                <li>In the <strong>cabana</strong>, press <strong>button 3</strong> on the pump control — this runs the spa automatically for <strong>2 hours</strong>, then shuts off. Just press it again if you need more time.</li>
+                <li>On the <strong>heater</strong>, select <strong>Spa</strong> and set your temperature. It's preset to <strong>102°F</strong> — a nice comfortable soak.</li>
+                <li>When you're done, come back to the heater and press <strong>Spa again to turn off the heat</strong>.</li>
+                <li>Before leaving, <strong>turn the valves back to Pool Return &amp; Pool Suction</strong> so the pool returns to its normal filtration cycle and stays clean.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div id="outdoor-lighting" class="subsection">
+          <h3>Outdoor Lighting</h3>
+          <div class="content-block">
+            <div class="video-summary-row">
+              <div class="video-thumbnail" data-video="images/outdoor-lighting.mp4">
+                <img src="images/thumb-outdoor-lighting.jpg" alt="Outdoor lighting video" />
+                <div class="play-btn"><svg viewBox="0 0 24 24" fill="white"><polygon points="6,3 20,12 6,21"/></svg></div>
+              </div>
+              <ul class="instruction-list">
+                <li>Look for the <strong>green power outlet box</strong> at the edge of the deck.</li>
+                <li>Flip the switch on the box to turn on the <strong>Italian festival string lights</strong> strung around the backyard.</li>
+                <li>Great for evening ambiance — enjoy!</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ══ IN CASE OF EMERGENCY ══ -->
+    <section id="emergency" class="page-section emergency-section">
+      <div class="section-header">
+        <h2>In Case of Emergency</h2>
+      </div>
+      <div class="section-body">
+
+        <div id="shutoffs" class="subsection">
+          <h3>Gas, Water &amp; Electrical</h3>
+          <div class="content-block">
+            <img src="images/house-overhead.jpg" alt="House overhead diagram" class="section-img" style="width:100%;border-radius:10px;" />
+          </div>
+        </div>
+
+        <div id="evacuation" class="subsection">
+          <h3>Evacuation</h3>
+          <div class="content-block">
+            <div class="evac-block">
+              <h4>🔥 Fire</h4>
+              <ul class="instruction-list">
+                <li>Exit immediately — don't stop for belongings. Close doors behind you to slow the spread.</li>
+                <li>Use the <strong>front door</strong> (Barry Ave) or <strong>back gate</strong> as primary exits.</li>
+                <li>Call <strong>911</strong> once you are safely outside. Do not re-enter.</li>
+                <li>Nearest cross street: <strong>Barry Ave &amp; Sepulveda Blvd</strong>. Meet there to account for everyone.</li>
+              </ul>
+            </div>
+            <div class="evac-block">
+              <h4>🌎 Earthquake</h4>
+              <ul class="instruction-list">
+                <li><strong>During shaking:</strong> Drop, cover, and hold on — get under a sturdy table or against an interior wall, away from windows.</li>
+                <li><strong>After shaking stops:</strong> Check for injuries. If you smell gas, leave doors open and evacuate immediately — do not use light switches or open flames.</li>
+                <li>Expect aftershocks. Stay outside in an open area away from buildings and power lines.</li>
+                <li>Call <strong>911</strong> for emergencies; text if voice calls are congested.</li>
+              </ul>
+            </div>
+            <div class="evac-block">
+              <h4>⚠️ General</h4>
+              <ul class="instruction-list">
+                <li>Emergency services: <strong>911</strong></li>
+                <li>Nearest hospital: <strong>Cedars-Sinai Medical Center</strong> (~10 min, 8700 Beverly Blvd)</li>
+                <li>If directed to evacuate by authorities, take <strong>Sepulveda Blvd north</strong> toward the 405 as primary route.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Video modal -->
+  <div id="video-modal" class="video-modal" aria-hidden="true">
+    <div class="video-modal-backdrop"></div>
+    <div class="video-modal-content">
+      <button class="video-modal-close" aria-label="Close">&times;</button>
+      <video id="modal-video" controls playsinline></video>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
