@@ -452,7 +452,10 @@ body {
 
   .sidebar {
     transform: translateX(-100%);
-    top: 0;
+    top: 56px;
+    height: calc(100vh - 56px);
+    -webkit-overflow-scrolling: touch;
+    overflow-y: scroll;
   }
 
   .sidebar.open { transform: translateX(0); }
