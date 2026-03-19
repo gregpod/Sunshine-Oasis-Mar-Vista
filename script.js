@@ -1,14 +1,29 @@
 // ── Mobile nav ────────────────────────────────────────────────
+let _scrollY = 0;
+
 function toggleNav() {
   const open = document.getElementById('sidebar').classList.toggle('open');
   document.getElementById('overlay').classList.toggle('open');
-  document.body.style.overflow = open ? 'hidden' : '';
+  if (open) {
+    _scrollY = window.scrollY;
+    document.body.style.position = 'fixed';
+    document.body.style.top = `-${_scrollY}px`;
+    document.body.style.width = '100%';
+  } else {
+    document.body.style.position = '';
+    document.body.style.top = '';
+    document.body.style.width = '';
+    window.scrollTo(0, _scrollY);
+  }
 }
 
 function closeNav() {
   document.getElementById('sidebar').classList.remove('open');
   document.getElementById('overlay').classList.remove('open');
-  document.body.style.overflow = '';
+  document.body.style.position = '';
+  document.body.style.top = '';
+  document.body.style.width = '';
+  window.scrollTo(0, _scrollY);
 }
 
 // ── Active nav link on scroll ──────────────────────────────────
