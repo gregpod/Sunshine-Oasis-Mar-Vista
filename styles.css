@@ -506,6 +506,229 @@ body {
   font-size: 0.9rem;
 }
 
+/* ── Dining grid ──────────────────────────────────────────── */
+.section-subtitle {
+  color: var(--muted);
+  font-size: 0.9rem;
+  margin-top: 4px;
+}
+
+.dining-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.dining-card {
+  background: var(--white);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.dining-thumb {
+  height: 130px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.dining-emoji {
+  font-size: 3rem;
+  filter: drop-shadow(0 2px 6px rgba(0,0,0,0.3));
+}
+
+.dining-info {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.dining-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 6px;
+}
+
+.dining-tag {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--gold);
+  font-weight: 700;
+}
+
+.dining-dist {
+  font-size: 0.75rem;
+  color: var(--muted);
+}
+
+.dining-info h4 {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--dark);
+  margin-bottom: 6px;
+}
+
+.dining-info p {
+  font-size: 0.85rem;
+  color: var(--mid);
+  line-height: 1.5;
+  flex: 1;
+  margin-bottom: 14px;
+}
+
+.dining-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid var(--gold-pale);
+  padding-top: 10px;
+}
+
+.dining-stars {
+  font-size: 0.78rem;
+  color: var(--muted);
+}
+
+.dining-stars .dining-rating {
+  font-weight: 700;
+  color: var(--dark);
+}
+
+.dining-map-btn {
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--gold);
+  text-decoration: none;
+  letter-spacing: 0.04em;
+  transition: color 0.15s;
+}
+
+.dining-map-btn:hover { color: var(--dark); }
+
+/* ── Farmers Market ───────────────────────────────────────── */
+.fm-layout {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 32px;
+  align-items: start;
+}
+
+.fm-intro {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--mid);
+  margin-bottom: 24px;
+}
+
+.fm-details {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+  padding: 16px;
+  background: var(--gold-pale);
+  border-radius: var(--radius);
+  border-left: 3px solid var(--gold);
+}
+
+.fm-detail-item {
+  display: flex;
+  gap: 12px;
+  font-size: 0.9rem;
+  color: var(--dark);
+}
+
+.fm-detail-label {
+  font-weight: 700;
+  color: var(--gold);
+  min-width: 70px;
+  flex-shrink: 0;
+}
+
+.fm-highlights {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.fm-highlights li {
+  font-size: 0.9rem;
+  color: var(--mid);
+  padding-left: 16px;
+  position: relative;
+}
+
+.fm-highlights li::before {
+  content: '·';
+  position: absolute;
+  left: 0;
+  color: var(--gold);
+  font-weight: 700;
+}
+
+.fm-map-btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background: var(--gold);
+  color: var(--white);
+  text-decoration: none;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  transition: background 0.15s;
+}
+
+.fm-map-btn:hover { background: var(--dark); }
+
+.fm-gallery {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+
+.fm-img-tall {
+  grid-column: 1 / -1;
+}
+
+.fm-grid-2 {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 8px;
+}
+
+.fm-img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 8px;
+  display: block;
+}
+
+.fm-img-tall {
+  height: 240px;
+}
+
+@media (max-width: 768px) {
+  .fm-layout {
+    grid-template-columns: 1fr;
+  }
+  .fm-grid-2 {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
 /* ── Evacuation blocks ────────────────────────────────────── */
 .evac-block {
   margin-bottom: 20px;
