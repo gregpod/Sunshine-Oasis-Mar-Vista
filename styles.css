@@ -305,7 +305,7 @@ body {
   border-radius: 8px;
   overflow: hidden;
   aspect-ratio: 1 / 1;
-  flex-shrink: 0;
+  width: 100%;
 }
 
 .static-thumbnail img {
